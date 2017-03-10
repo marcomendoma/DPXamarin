@@ -16,7 +16,7 @@ namespace DPXamarin
             MainPage = new DPXamarin.MainPage();
         }
 
-        protected override void OnStart()
+        protected override void OnStart() 
         {
             // Handle when your app starts
         }
