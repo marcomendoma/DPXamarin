@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DPXamarin.View.ComicPage"
+             xmlns:VM="clr-namespace:DPXamarin.ViewModel" 
+             Title="Lista de Personagens">
+
+    <ContentPage.BindingContext>
+        <VM:ComicViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout Spacing="0">
+        <Button Text="Sincronizar" Command="{Binding GetComicsCommand}"/>
+        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
+        <ListView x:Name="ListViewComics" ItemsSource="{Binding Comics}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding title}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
+    

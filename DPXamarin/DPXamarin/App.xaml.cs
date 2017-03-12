@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace DPXamarin
 {
@@ -12,6 +7,9 @@ namespace DPXamarin
         public App()
         {
             InitializeComponent();
+
+            // The root page of your application 
+            var content = new View.ComicPage();
 
             MainPage = new DPXamarin.MainPage();
         }
