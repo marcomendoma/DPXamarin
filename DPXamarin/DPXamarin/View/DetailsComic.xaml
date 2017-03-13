@@ -4,9 +4,9 @@
              x:Class="DPXamarin.View.DetailsComic">
     <ScrollView Padding="10">
         <StackLayout Spacing="10">
-            <Image Source="{Binding Image}" HeightRequest="200" WidthRequest="200"/>
-            <Label Text="{Binding Nome}" FontSize="24"/>
-            <Label Text="{Binding Description}" />
+            <Image Source="{Binding thumbnail}" HeightRequest="200" WidthRequest="200"/>
+            <Label Text="{Binding title}" FontSize="24"/>
+            <Label Text="{Binding description}" />
             <Button Text="Ir al Sitio Web" x:Name="ButtonWebSite"/>
         </StackLayout>
     </ScrollView>

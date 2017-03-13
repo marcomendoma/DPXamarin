@@ -6,7 +6,6 @@ using System;
 using System.Threading.Tasks;
 
 using DPXamarin.Model;
-using DPXamarin.BaseDb;
 
 namespace DPXamarin.ViewModel
 {
@@ -62,9 +61,8 @@ namespace DPXamarin.ViewModel
                 {
                     IsBusy = true;
 
-                    var Repository = new Repository();
-                    //var Items = await Repository.GetCatsAsAzure();
-                    var Items = await Repository.GetComics();
+                    var servico = new Services.AzureService<Comic>();
+                    var Items = await servico.GetComics();
 
                     Comics.Clear();
 

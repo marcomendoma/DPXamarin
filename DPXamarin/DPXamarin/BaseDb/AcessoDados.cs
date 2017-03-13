@@ -14,7 +14,7 @@ namespace DPXamarin.BaseDb
         public AcessoDados()
         {
             var config = DependencyService.Get<IConfig>();
-            _conexao = new SQLite.Net.SQLiteConnection(config.Plataforma, System.IO.Path.Combine(config.DiretorioDB, "bancodados.db3"));
+            _conexao = new SQLite.Net.SQLiteConnection(config.Plataforma, System.IO.Path.Combine(config.DiretorioDB, "comicDB.db3"));
 
             _conexao.CreateTable<Comic>();
         }

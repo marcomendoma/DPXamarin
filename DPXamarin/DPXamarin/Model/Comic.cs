@@ -1,14 +1,21 @@
-﻿using SQLite.Net.Attributes;
-using System;
+﻿using System;
+using Microsoft.WindowsAzure.MobileServices;
+using SQLite.Net.Attributes;
 using System.Collections.Generic;
 
 namespace DPXamarin.Model
 {
+    [DataTable("Comic")]
     public class Comic
     {
         [PrimaryKey, AutoIncrement]
         public int id { get; set; }                                     //id(int, optional): The unique ID of the comic resource.,
+
+        [Version]
+        public string AzureVersion { get; set; }                        //Azure version
+
         public int digitalId { get; set; }                              //digitalId(int, optional): The ID of the digital comic representation of this comic.Will be 0 if the comic is not available digitally.,
+
         public string title { get; set; }                               //title(string, optional): The canonical title of the comic.,
         public double issueNumber { get; set; }                         //issueNumber (double, optional): The number of the issue in the series(will generally be 0 for collection formats).,
         public string variantDescription { get; set; }                  //variantDescription(string, optional): If the issue is a variant(e.g.an alternate cover, second printing, or director’s cut), a text description of the variant.,
@@ -36,5 +43,8 @@ namespace DPXamarin.Model
         public CharacterList characters { get; set; }                   //characters (CharacterList, optional): A resource list containing the characters which appear in this comic.,
         public StoryList stories { get; set; }                          //stories (StoryList, optional): A resource list containing the stories which appear in this comic.,
         public EventList events { get; set; }                           //events (EventList, optional): A resource list containing the events in which this comic appears.
+
+        
+
     }
 }

@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+
 using DPXamarin.Model;
 
-namespace DPXamarin.BaseDb
+namespace DPXamarin.Repositorio
 {
     public class Repository
     {
         public async Task<List<Comic>> GetComics() {
-            List<Comic> Comics;
+            List<Comic> Comics = new List<Comic>();
 
             var URLWebAPI = "http://gateway.marvel.com:80/v1/public/comics?apikey=a2cfff2c08621b9d7a829ca6c4cb0828";
 
