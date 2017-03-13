@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using DPXamarin.Model;
 
-namespace DPXamarin.Model
+namespace DPXamarin.BaseDb
 {
     public class Repository
     {

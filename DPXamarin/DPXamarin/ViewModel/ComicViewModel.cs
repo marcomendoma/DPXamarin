@@ -6,6 +6,7 @@ using System;
 using System.Threading.Tasks;
 
 using DPXamarin.Model;
+using DPXamarin.BaseDb;
 
 namespace DPXamarin.ViewModel
 {

@@ -1,10 +1,12 @@
-﻿using System;
+﻿using SQLite.Net.Attributes;
+using System;
 using System.Collections.Generic;
 
 namespace DPXamarin.Model
 {
     public class Comic
     {
+        [PrimaryKey, AutoIncrement]
         public int id { get; set; }                                     //id(int, optional): The unique ID of the comic resource.,
         public int digitalId { get; set; }                              //digitalId(int, optional): The ID of the digital comic representation of this comic.Will be 0 if the comic is not available digitally.,
         public string title { get; set; }                               //title(string, optional): The canonical title of the comic.,

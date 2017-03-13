@@ -9,10 +9,10 @@ namespace DPXamarin.View
         public ComicPage()
         {
             InitializeComponent();
-            ListViewComics.ItemSelected += ListViewCats_ItemSelected;
+            ListViewComics.ItemSelected += ListViewComics_ItemSelected;
         }
 
-        private async void ListViewCats_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void ListViewComics_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var SelectedComic = e.SelectedItem as Model.Comic;
 
